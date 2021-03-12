@@ -22,6 +22,8 @@ pip install python-language-server
 cp append_zshrc ~
 cp .vimrc ~
 mkdir -p ~/.config/nvim
+cp 2.finish_setup.sh ~
+cp 3.vim_setup.sh ~
 cp init.vim ~/.config/nvim/init.vim 
 cp .tmux.conf ~
 cd
@@ -44,13 +46,4 @@ tar xvf node-v15.9.0-linux-x64.tar.xz \
     --exclude README.md \
     --strip-components 1 \
     -C ~/opt
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
-cat ~/.zshrc append_zshrc > tmp
-mv tmp ~/.zshrc
-sed -i 's/robbyrussell/agnoster/g' ~/.zshrc
-sed -i 's/plugins=(git)/plugins=(git command-not-found common-aliases debian dircycle dirhistory history history-substring-search colored-man-pages)/g' ~/.zshrc 
-source ~/.zshrc
-exec zsh
-vim -c ':CocInstall coc-python |quit'
-vim -c ':CocInstall coc-r-lsp |quit'
-
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
