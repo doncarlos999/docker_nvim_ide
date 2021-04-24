@@ -9,12 +9,12 @@ $SUDO a_command
 if grep -q Amazon /etc/*release
 then
     $SUDO yum update
-    $SUDO yum install -y tmux zsh git htop
+    $SUDO yum install -y tmux zsh git htop curl
 fi
 if grep -q "Ubuntu\|Debian" /etc/*release
 then
     $SUDO apt update
-    $SUDO apt install -y zsh tmux git htop
+    $SUDO apt install -y zsh tmux git htop curl
 fi
 locale-gen en_US.UTF-8 
 localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
