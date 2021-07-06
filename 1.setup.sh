@@ -27,7 +27,7 @@ cp 3.vim_setup.sh ~
 cp init.vim ~/.config/nvim/init.vim 
 cp .tmux.conf ~
 cd
-curl -LO https://github.com/neovim/neovim/releases/download/stable/nvim.appimage
+curl -LO https://github.com/neovim/neovim/releases/download/v0.5.0/nvim.appimage
 chmod u+x nvim.appimage
 ./nvim.appimage --appimage-extract
 git clone https://github.com/zsh-users/zsh-syntax-highlighting
